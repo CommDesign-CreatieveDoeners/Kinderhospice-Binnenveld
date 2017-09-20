@@ -1,0 +1,451 @@
+/*
+Theme Name: Kinderhospice Binnenveld Theme
+Theme URI: https://www.commdesign.nl/
+Author: Rick Smink
+Author URI: https://www.commdesign.nl/
+
+Description: WP RootStrap is a flat and minimal design theme powered by TwitterBootstrap 3.0. It has unique designed for SEO optimization with faster page loading. It can be  used as a started theme for development of any website. It has lots of theme hook to help developer for further development.  The flat look starter theme having a lot of theme functionality to manage logo fav icon and social media profile etc. The theme can be used for any kind of blog or news websites. This is fully responsive theme, works perfectly with any mobile devices or tablet.   
+* Global
+* Content
+* Post styling
+* Singe Post/Page Pagination
+* Media
+* Widgets
+* Buttons
+* Infinite Scroll
+* Custom Styles
+* Navigation
+* Comments
+* Attachment styling
+* Footer
+* Mobile Styling
+* Social icons
+* Call For Action
+
+Version: 1.2.4
+License: GNU General Public License v3 or later
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
+Tags: white, light, green,  two-columns, right-sidebar, left-sidebar, responsive-layout, custom-menu, featured-images
+Text Domain: rootstrap
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+rootstrap is based on Underscores http://underscores.me/, (C) 2012-2013 Automattic, Inc.
+
+*/
+
+/* Table of content
+----------------------------------------------- 
+1. Global
+2. Content
+3. Post styling
+4. Singe Post/Page Pagination
+5. Media
+6. Widgets
+7. Buttons
+8. Infinite Scroll
+8. Custom Styles
+9. Navigation
+10. Comments
+11. Attachment styling
+12. Footer
+13. Mobile Styling
+14. Social icons
+15. Call For Action
+*/
+@import url(http://www.kinderhospice.commdesign-demo.nl/wp-content/themes/kinderhospice-binnenveld/inc/css/bootstrap.css);
+@import url(http://www.kinderhospice.commdesign-demo.nl/wp-content/themes/kinderhospice-binnenveld/inc/css/bootstrap.min.css);
+@import url(http://www.kinderhospice.commdesign-demo.nl/wp-content/themes/kinderhospice-binnenveld/inc/css/slider.css);
+@import url(http://www.kinderhospice.commdesign-demo.nl/wp-content/plugins/js_composer/assets/css/js_composer.min.css);
+@import url(http://www.kinderhospice.commdesign-demo.nl/wp-content/plugins/js_composer/assets/css/js_composer.css);
+@import url(http://www.kinderhospice.commdesign-demo.nl/wp-content/themes/kinderhospice-binnenveld/style.css);
+
+@import url(http://www.kinderhospice.commdesign-demo.nl/wp-content/plugins/Ultimate_VC_Addons/assets/min-css/modal.min.css);
+@import url(http://www.kinderhospice.commdesign-demo.nl/wp-content/plugins/Ultimate_VC_Addons/assets/min-css/content-box.min.css);
+
+@import url(http://www.kinderhospice.commdesign-demo.nl/wp-content/plugins/ts-visual-composer-extend/css/ts-visual-composer-extend-front.min.css);
+
+@import url(http://www.kinderhospice.commdesign-demo.nl/wp-content/plugins/wp-logo-showcase-responsive-slider-slider/assets/css/logo-showcase.css);
+
+@import url(http://www.kinderhospice.commdesign-demo.nl/wp-content/plugins/superfly-menu/css/public.min.css);
+
+
+
+@import url('https://fonts.googleapis.com/css?family=Bubblegum+Sans');
+
+
+
+/* =Donate
+----------------------------------------------- */
+.donate-btn {
+  overflow: visible;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  font: inherit;
+  line-height: normal;
+  cursor: pointer;
+  -moz-user-select: text;
+  display: block;
+  text-decoration: none;
+  text-transform: uppercase;
+ padding: 12px 36px 22px;
+  background-color: #fff;
+  color: #088A29;
+  border: 2px solid #088A29;
+  border-radius: 6px;
+  margin-bottom: 16px;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+}
+.donate-btn::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+.donate-btn--stripe {
+  overflow: hidden;
+  position: relative;
+}
+.donate-btn--stripe:after {
+  content: '';
+  display: block;
+  height: 7px;
+  width: 100%;
+  background-image: -webkit-repeating-linear-gradient(45deg,#088A29, #088A29 1px, transparent 2px, transparent 5px);
+  background-image: repeating-linear-gradient(45deg, #088A29, #088A29 1px, transparent 2px, transparent 5px);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-top: 1px solid #088A29;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-size: 7px 7px;
+}
+.donate-btn--stripe:hover {
+  background-color: #088A29;
+  color: #fff;
+  border-color: #000;
+}
+.donate-btn--stripe:hover:after {
+  background-image: -webkit-repeating-linear-gradient(45deg, #fff, #fff 1px, transparent 2px, transparent 5px);
+  background-image: repeating-linear-gradient(45deg, #fff, #fff 1px, transparent 2px, transparent 5px);
+  border-top: 1px solid #000;
+  -webkit-animation: stripe-slide 12s infinite linear forwards;
+          animation: stripe-slide 12s infinite linear forwards;
+}
+.donate-btn--large {
+  width: 50%;
+}
+.donate-btn--radius {
+border-radius: 8px;
+    width: 30%;
+    float: right;
+    margin-top: 35px;
+    height: 50px;
+}
+
+
+@media only screen and (max-width: 500px) {
+	.donate-btn {
+	width: 100%;
+}
+}
+
+/* =Custom
+----------------------------------------------- */
+
+body {
+    color: #6B6B6B;
+    word-wrap: break-word;
+    line-height: 1.7;
+    font-size: 1.5em;
+    font-weight: 400;
+    letter-spacing: 0.03em;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+
+
+.navbar > .container .navbar-brand {
+    line-height: 66px;
+    padding: 10px 10px;
+    max-width: 400px;
+}
+
+.navbar.navbar-default {
+    margin: 0px auto;
+    border-bottom: 0px solid #eee!important;
+}
+
+body {
+    background: #ffffff;
+}
+
+.hentry {
+	padding: 0px;
+	display: block;
+	margin: 0 0 0em!important;
+}
+
+/* Clouds CSS*/
+
+#cloud {
+	width: 350px; height: 120px;
+	
+	background: #f2f9fe;
+	background: linear-gradient(top, #f2f9fe 5%, #d6f0fd 100%);
+	background: -webkit-linear-gradient(top, #f2f9fe 5%, #d6f0fd 100%);
+	background: -moz-linear-gradient(top, #f2f9fe 5%, #d6f0fd 100%);
+	background: -ms-linear-gradient(top, #f2f9fe 5%, #d6f0fd 100%);
+	background: -o-linear-gradient(top, #f2f9fe 5%, #d6f0fd 100%);
+	
+	border-radius: 100px;
+	-webkit-border-radius: 100px;
+	-moz-border-radius: 100px;
+	
+	position: relative;
+	margin: 120px auto 20px;
+}
+
+#cloud:after, #cloud:before {
+	content: '';
+	position: absolute;
+	background: #f2f9fe;
+	z-index: -1
+}
+
+#cloud:after {
+	width: 100px; height: 100px;
+	top: -50px; left: 50px;
+	
+	border-radius: 100px;
+	-webkit-border-radius: 100px;
+	-moz-border-radius: 100px;
+}
+
+#cloud:before {
+	width: 180px; height: 180px;
+	top: -90px; right: 50px;
+	
+	border-radius: 200px;
+	-webkit-border-radius: 200px;
+	-moz-border-radius: 200px;
+}
+
+.shadow {
+	width: 350px;
+	position: absolute; bottom: -10px; 
+	background: #000;
+	z-index: -1;
+	
+	box-shadow: 0 0 25px 8px rgba(0, 0, 0, 0.4);
+	-moz-box-shadow: 0 0 25px 8px rgba(0, 0, 0, 0.4);
+	-webkit-box-shadow: 0 0 25px 8px rgba(0, 0, 0, 0.4);
+	
+	border-radius: 50%;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+}
+
+/* Hack the Bootstrap Navigation so you have a hamburger always */
+ 
+.navbar-header {
+    float: none;
+}
+.navbar-toggle {
+    display: block;
+}
+.navbar-collapse {
+    border-top: 1px solid transparent;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+}
+.navbar-collapse.collapse {
+    display: none!important;
+}
+.navbar-nav {
+    float: none!important;
+    margin: 7.5px -15px;
+}
+.navbar-nav>li {
+    float: none;
+}
+.navbar-nav>li>a {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.navbar-collapse.collapse.in {display: block !important; }
+
+.vc-hoverbox-inner {
+    width: 100%;
+    display: inline-block;
+    min-height: 200px!important;
+}
+
+.radius {
+    border-radius: 25px;
+}
+
+#background-overlay{
+	background: rgba(95,191,65,0.6);
+}
+
+
+.logo_showcase .slick-slide {
+    padding: 0px!important;
+    text-align: center !important;
+    display: inline-block !important;
+    float: none !important;
+    vertical-align: middle !important;
+}
+
+.logo_showcase .slick-slide img {
+    display: inline-block !important;
+    padding: 40px!important;
+    border: 1px solid #f1f1f1;
+    background-color: #fbfbfb;
+}
+
+
+.hp-logo.logo_showcase .slick-slide img {
+    display: inline-block !important;
+    padding: 40px!important;
+    border: 1px solid #f1f1f1;
+    background-color: #fbfbfb;
+}
+
+.logo_showcase {
+    padding: 0 0px 0px 0px !important;
+    margin: 0 !important;
+    text-align: center;
+    clear: both;
+}
+
+
+.wpls-logo-showcase .wpls-logo-cnt.slick-slide {
+    margin: 0 0px!important;
+}
+
+
+#content {
+    margin-top: 40px;
+    margin-bottom: 0px!important;
+}
+
+
+#main .page-header {
+    margin-top: 0;
+    display: none;
+}
+
+.btn-modal-lg {
+    padding: 10px 16px;
+    font-size: 40px!important;
+    line-height: 1.33;
+    border-radius: 25px!important;
+    width: 100%!important;
+    min-height: 170px!important;
+}
+
+.ult-content-box-container, .ult-content-box-container * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    color: #fff!important;
+    border-top-left-radius: 25px!important;
+    border-top-right-radius: 25px!important;
+    border-bottom-left-radius: 25px!important;
+    border-bottom-right-radius: 25px!important;
+}
+
+.vc-hoverbox-wrapper, .vc-hoverbox-wrapper * {
+    box-sizing: border-box;
+    color: #fff!important;
+}
+
+
+
+.ts-title-typed-posttext, .ts-title-typed-pretext, .ts-title-typed-string {
+   font-family: 'Bubblegum Sans', cursive!important;
+}
+
+.cta h2 {
+   font-family: 'Bubblegum Sans', cursive!important;
+}
+
+footer.entry-meta {
+    clear: both;
+    display: none!important;
+}
+
+
+.overlay-genie.ult-open .ult_modal-content {
+    border-radius: 25px!important;
+	border-width: 1px!important;
+}
+
+h3.ult_modal-title {
+    color: inherit;
+    display: table-cell;
+    vertical-align: middle;
+    margin: 0;
+    padding: 10px 20px;
+    font-size: 2em!important;
+    line-height: 1.5em;
+font-family: 'Bubblegum Sans', cursive!important;
+}
+
+.ult_modal-body {
+    padding: 15px 20px;
+    background: #fff;
+    max-width: 100%;
+    overflow: hidden;
+    min-height: 350px;
+    line-height: 1.5em;
+}
+
+
+#colophon {
+border-top: 2px dashed rgba(58, 58, 58, 0.4);
+}
+
+
+#sfm-mob-navbar {
+    background-color: #eeeeee!important;
+border-bottom: 1px solid #a2a2a2!important;
+}
+
+.sfm-navicon {
+color: #088A29!important;
+}
+
+
+
+.wpls-logo-showcase .wpls-logo-cnt.slick-slide img {
+    display: inline-block !important;
+    padding: 10px;
+    border: 0px solid #f1f1f1!important;
+    box-shadow: none !important;
+}
+
+
+#content {
+    margin-top: -25px!important;
+    margin-bottom: 0px!important;
+}
+
+@media only screen and (max-width: 500px) {
+	#content {
+    margin-top: 60px!important;
+    margin-bottom: 0px!important;
+}
+}
+
+.overlay-patern{
+    background-image: url(http://www.kinderhospice.commdesign-demo.nl/wp-content/uploads/2017/09/kinderhospice_patern-a5.png)!important;
+    background-repeat: repeat!important;
+    background-size: contain;
+}
