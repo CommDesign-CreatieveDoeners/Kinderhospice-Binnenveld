@@ -101,8 +101,8 @@ function rootstrap_widgets_init() {
       'after_widget' => '</div>',
       'before_title' => '<h3 class="widgettitle">',
       'after_title' => '</h3>',
-    ));	
-    
+    ));
+
     register_sidebar(array(
     	'id' => 'footer-widget-1',
     	'name' =>  __( 'Footer Widget 1', 'rootstrap' ),
@@ -131,7 +131,7 @@ function rootstrap_widgets_init() {
       'after_widget' => '</div>',
       'before_title' => '<h3 class="widgettitle">',
       'after_title' => '</h3>',
-    ));	
+    ));
 
 
     register_widget( 'rootstrap_popular_posts_widget' );
@@ -148,7 +148,7 @@ add_filter( 'get_search_form', 'rootstrap_wpsearch' );
 
 
 /**
- * Enqueue scripts and styles. 
+ * Enqueue scripts and styles.
  */
 function rootstrap_scripts() {
 
@@ -165,12 +165,12 @@ function rootstrap_scripts() {
 	wp_enqueue_script('rootstrap-bootstrapjs', get_template_directory_uri().'/inc/js/bootstrap.min.js', array('jquery') );
 	wp_enqueue_script( 'stickymenu', get_template_directory_uri() . '/inc/js/jquery.sticky.js', array('jquery') );
 	wp_enqueue_script( 'rootstrap-bootstrapwp', get_template_directory_uri() . '/inc/js/functions.min.js', array('jquery') );
-	wp_enqueue_script( 'layerslider', get_template_directory_uri() . '/inc/js/jquery.cslider.js', array('jquery'), true );	
-	if( ( is_home() || is_front_page() ) && rootstrap_get_option('rootstrap_slider_checkbox') == 1 ) {		
+	wp_enqueue_script( 'layerslider', get_template_directory_uri() . '/inc/js/jquery.cslider.js', array('jquery'), true );
+	if( ( is_home() || is_front_page() ) && rootstrap_get_option('rootstrap_slider_checkbox') == 1 ) {
 		wp_enqueue_script( 'mordernizer', get_template_directory_uri() . '/inc/js/modernizr.custom.28468.js', array('jquery'), true );
-	}	
-	
-	
+	}
+
+
 
 	wp_enqueue_script( 'rootstrap-skip-link-focus-fix', get_template_directory_uri() . '/inc/js/skip-link-focus-fix.js', array(), '20140222', true );
 
@@ -230,17 +230,29 @@ function load_custom_css() {
     wp_enqueue_style('my-script-slug',  get_stylesheet_directory_uri() . '/custom_style.css');
 }
 
+
+
+
+
 /**
-*Load Donate-btn js in wp head
-*/
-function my_scripts_method() {
-    wp_enqueue_script(
-        'custom-script',
-        get_stylesheet_directory_uri() . 'inc/js/index.js',
-        array( 'jquery' )
-    );
+ * Suppress mimetype security measures since 4.7.1 for SVG
+ *
+ * @author: Simon van der Steen
+ * @date: 29-3-2017
+ * @url: http://Simon.vdSteen.me/WordPress/gebruik-vector-bestanden-in-wordpress
+ * @source: https://wordpress.org/support/topic/wp-4-7-1-kills-svg/page/3/#post-8649196
+ */
+function svds_suppress_svg_security_bug( $filetype_ext_data, $file, $filename, $mimes ) {
+	if ( substr($filename, -4) === '.svg' ) {
+		$filetype_ext_data['ext'] = 'svg';
+		$filetype_ext_data['type'] = 'image/svg+xml';
+	}
+
+	if ( substr($filename, -5) === '.svgz' ) {
+		$filetype_ext_data['ext'] = 'svgz';
+		$filetype_ext_data['type'] = 'image/svg+xml';
+	}
+
+	return $filetype_ext_data;
 }
-
-add_action( 'wp_enqueue_scripts', 'my_scripts_method' );
-
-
+add_filter( 'wp_check_filetype_and_ext', 'svds_suppress_svg_security_bug', 100, 4 );
