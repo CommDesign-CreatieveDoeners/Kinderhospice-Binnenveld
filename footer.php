@@ -25,7 +25,6 @@
 				</nav>
 				<div class="copyright">
 					<?php echo rootstrap_get_option( 'custom_footer_text', 'rootstrap' ); ?>
-					
 
 				</div>
 			</div><!-- .site-info -->
