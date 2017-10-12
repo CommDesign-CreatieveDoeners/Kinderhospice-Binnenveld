@@ -4,7 +4,7 @@ Theme URI: https://www.commdesign.nl/
 Author: Rick Smink
 Author URI: https://www.commdesign.nl/
 
-Description: WP RootStrap is a flat and minimal design theme powered by TwitterBootstrap 3.0. It has unique designed for SEO optimization with faster page loading. It can be  used as a started theme for development of any website. It has lots of theme hook to help developer for further development.  The flat look starter theme having a lot of theme functionality to manage logo fav icon and social media profile etc. The theme can be used for any kind of blog or news websites. This is fully responsive theme, works perfectly with any mobile devices or tablet.   
+Description: WP RootStrap is a flat and minimal design theme powered by TwitterBootstrap 3.0. It has unique designed for SEO optimization with faster page loading. It can be  used as a started theme for development of any website. It has lots of theme hook to help developer for further development.  The flat look starter theme having a lot of theme functionality to manage logo fav icon and social media profile etc. The theme can be used for any kind of blog or news websites. This is fully responsive theme, works perfectly with any mobile devices or tablet.
 * Global
 * Content
 * Post styling
@@ -36,7 +36,7 @@ rootstrap is based on Underscores http://underscores.me/, (C) 2012-2013 Automatt
 */
 
 /* Table of content
------------------------------------------------ 
+-----------------------------------------------
 1. Global
 2. Content
 3. Post styling
@@ -70,88 +70,33 @@ rootstrap is based on Underscores http://underscores.me/, (C) 2012-2013 Automatt
 
 @import url(http://www.kinderhospice.commdesign-demo.nl/wp-content/plugins/superfly-menu/css/public.min.css);
 
+@import url(http://www.kinderhospice.commdesign-demo.nl/wp-content/plugins/tweetlab/assets/css/mgl_twitter.css);
+
+@import url(http://www.kinderhospice.commdesign-demo.nl/wp-content/plugins/Ultimate_VC_Addons/assets/min-css/background-style.min.css);
+@import url(http://www.kinderhospice.commdesign-demo.nl/wp-content/plugins/Ultimate_VC_Addons/assets/min-css/style.min.css);
+
+@import url(http://www.kinderhospice.commdesign-demo.nl/wp-content/plugins/gravityforms/css/formsmain.min.css);
+
+@import url(http://www.kinderhospice.commdesign-demo.nl/wp-content/plugins/superfly-menu/css/public.min.css);
+
+@import url('http://www.kinderhospice.commdesign-demo.nl/wp-content/plugins/gravityforms/css/browsers.min.css');
+
+@import url('http://www.kinderhospice.commdesign-demo.nl/wp-content/plugins/gravityforms/css/readyclass.min.css');
 
 
 @import url('https://fonts.googleapis.com/css?family=Bubblegum+Sans');
 
 
 
-/* =Donate
+
+/* Twit
 ----------------------------------------------- */
-.donate-btn {
-  overflow: visible;
-  margin: 0;
-  padding: 0;
-  border: 0;
-  background: transparent;
-  font: inherit;
-  line-height: normal;
-  cursor: pointer;
-  -moz-user-select: text;
-  display: block;
-  text-decoration: none;
-  text-transform: uppercase;
- padding: 12px 36px 22px;
-  background-color: #fff;
-  color: #088A29;
-  border: 2px solid #088A29;
-  border-radius: 6px;
-  margin-bottom: 16px;
-  -webkit-transition: all .5s ease;
-  transition: all .5s ease;
-}
-.donate-btn::-moz-focus-inner {
-  padding: 0;
-  border: 0;
-}
-.donate-btn--stripe {
-  overflow: hidden;
-  position: relative;
-}
-.donate-btn--stripe:after {
-  content: '';
-  display: block;
-  height: 7px;
-  width: 100%;
-  background-image: -webkit-repeating-linear-gradient(45deg,#088A29, #088A29 1px, transparent 2px, transparent 5px);
-  background-image: repeating-linear-gradient(45deg, #088A29, #088A29 1px, transparent 2px, transparent 5px);
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  border-top: 1px solid #088A29;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  background-size: 7px 7px;
-}
-.donate-btn--stripe:hover {
-  background-color: #088A29;
-  color: #fff;
-  border-color: #000;
-}
-.donate-btn--stripe:hover:after {
-  background-image: -webkit-repeating-linear-gradient(45deg, #fff, #fff 1px, transparent 2px, transparent 5px);
-  background-image: repeating-linear-gradient(45deg, #fff, #fff 1px, transparent 2px, transparent 5px);
-  border-top: 1px solid #000;
-  -webkit-animation: stripe-slide 12s infinite linear forwards;
-          animation: stripe-slide 12s infinite linear forwards;
-}
-.donate-btn--large {
-  width: 50%;
-}
-.donate-btn--radius {
-border-radius: 8px;
-    width: 30%;
-    float: right;
-    margin-top: 35px;
-    height: 50px;
+.mgl_twitter.mgl_twitter_template_balloon .mgl_tweet .mgl_tweet_user .mgl_tweet_avatar {
+    box-shadow: none!important;
 }
 
 
-@media only screen and (max-width: 500px) {
-	.donate-btn {
-	width: 100%;
-}
-}
+
 
 /* =Custom
 ----------------------------------------------- */
@@ -194,18 +139,18 @@ body {
 
 #cloud {
 	width: 350px; height: 120px;
-	
+
 	background: #f2f9fe;
 	background: linear-gradient(top, #f2f9fe 5%, #d6f0fd 100%);
 	background: -webkit-linear-gradient(top, #f2f9fe 5%, #d6f0fd 100%);
 	background: -moz-linear-gradient(top, #f2f9fe 5%, #d6f0fd 100%);
 	background: -ms-linear-gradient(top, #f2f9fe 5%, #d6f0fd 100%);
 	background: -o-linear-gradient(top, #f2f9fe 5%, #d6f0fd 100%);
-	
+
 	border-radius: 100px;
 	-webkit-border-radius: 100px;
 	-moz-border-radius: 100px;
-	
+
 	position: relative;
 	margin: 120px auto 20px;
 }
@@ -220,7 +165,7 @@ body {
 #cloud:after {
 	width: 100px; height: 100px;
 	top: -50px; left: 50px;
-	
+
 	border-radius: 100px;
 	-webkit-border-radius: 100px;
 	-moz-border-radius: 100px;
@@ -229,7 +174,7 @@ body {
 #cloud:before {
 	width: 180px; height: 180px;
 	top: -90px; right: 50px;
-	
+
 	border-radius: 200px;
 	-webkit-border-radius: 200px;
 	-moz-border-radius: 200px;
@@ -237,21 +182,21 @@ body {
 
 .shadow {
 	width: 350px;
-	position: absolute; bottom: -10px; 
+	position: absolute; bottom: -10px;
 	background: #000;
 	z-index: -1;
-	
+
 	box-shadow: 0 0 25px 8px rgba(0, 0, 0, 0.4);
 	-moz-box-shadow: 0 0 25px 8px rgba(0, 0, 0, 0.4);
 	-webkit-box-shadow: 0 0 25px 8px rgba(0, 0, 0, 0.4);
-	
+
 	border-radius: 50%;
 	-moz-border-radius: 50%;
 	-webkit-border-radius: 50%;
 }
 
 /* Hack the Bootstrap Navigation so you have a hamburger always */
- 
+
 .navbar-header {
     float: none;
 }
@@ -387,25 +332,7 @@ footer.entry-meta {
 	border-width: 1px!important;
 }
 
-h3.ult_modal-title {
-    color: inherit;
-    display: table-cell;
-    vertical-align: middle;
-    margin: 0;
-    padding: 10px 20px;
-    font-size: 2em!important;
-    line-height: 1.5em;
-font-family: 'Bubblegum Sans', cursive!important;
-}
 
-.ult_modal-body {
-    padding: 15px 20px;
-    background: #fff;
-    max-width: 100%;
-    overflow: hidden;
-    min-height: 350px;
-    line-height: 1.5em;
-}
 
 
 #colophon {
@@ -422,30 +349,385 @@ border-bottom: 1px solid #a2a2a2!important;
 color: #088A29!important;
 }
 
-
+.navbar {
+    min-height:150px;
+}
 
 .wpls-logo-showcase .wpls-logo-cnt.slick-slide img {
     display: inline-block !important;
     padding: 10px;
-    border: 0px solid #f1f1f1!important;
+    border: 1px solid #f1f1f1!important;
     box-shadow: none !important;
 }
 
 
-#content {
-    margin-top: -25px!important;
-    margin-bottom: 0px!important;
+img.block-icon {
+    max-width: 60px;
+    max-height: 55px;
 }
 
-@media only screen and (max-width: 500px) {
-	#content {
-    margin-top: 60px!important;
-    margin-bottom: 0px!important;
+.block-title{
+  margin-top: 10px;
+}
+
+.filmpje{
+  min-height: 216px;
+}
+
+.ult-modal-input-wrapper.ult-adjust-bottom-margin{
+  margin-bottom: 0px!important;
+}
+
+
+.gform_wrapper .gfield_checkbox li label, .gform_wrapper .gfield_radio li label {
+    font-weight: 400!important;
+}
+
+
+
+
+
+/* =Donate
+----------------------------------------------- */
+
+
+
+.jumbotron h1 {
+	color: #353535;
+}
+footer {
+  margin-bottom: 0 !important;
+  margin-top: 80px;
+}
+footer p {
+  margin: 0;
+  padding: 0;
+}
+span.icon {
+	margin: 0 5px;
+	color: #D64541;
+}
+
+.mrng-60-top {
+	margin-top: 60px;
+}
+/* Global Button Styles */
+a.animated-button:link, a.animated-button:visited {
+	position: relative;
+	display: block;
+	margin: 30px auto 0;
+	padding: 14px 15px;
+	color: #fff;
+	font-size:16px;
+	font-weight: 400;
+	text-align: center;
+	text-decoration: none;
+    text-transform: capitalize;
+	overflow: hidden;
+	letter-spacing: .08em;
+	border-radius: 0;
+	text-shadow: 0 0 1px rgba(0, 0, 0, 0.2), 0 1px 0 rgba(0, 0, 0, 0.2);
+	-webkit-transition: all 1s ease;
+	-moz-transition: all 1s ease;
+	-o-transition: all 1s ease;
+	transition: all 1s ease;
+
+}
+a.animated-button:link:after, a.animated-button:visited:after {
+	content: "";
+	position: absolute;
+	height: 0%;
+	left: 50%;
+	top: 50%;
+	width: 150%;
+	z-index: -1;
+	-webkit-transition: all 0.75s ease 0s;
+	-moz-transition: all 0.75s ease 0s;
+	-o-transition: all 0.75s ease 0s;
+	transition: all 0.75s ease 0s;
+}
+a.animated-button:link:hover, a.animated-button:visited:hover {
+	text-shadow: none;
+  color: #339933;
+}
+a.animated-button:link:hover:after, a.animated-button:visited:hover:after {
+	height: 450%;
+}
+a.animated-button:link, a.animated-button:visited {
+	position: relative;
+	display: block;
+	margin: 30px auto 0;
+	padding: 14px 15px;
+  color: #339933;
+	font-size:14px;
+	border-radius: 0;
+	font-weight: bold;
+	text-align: center;
+	text-decoration: none;
+    text-transform: capitalize;
+	overflow: hidden;
+	letter-spacing: .08em;
+	text-shadow: 0 0 1px rgba(0, 0, 0, 0.2), 0 1px 0 rgba(0, 0, 0, 0.2);
+	-webkit-transition: all 1s ease;
+	-moz-transition: all 1s ease;
+	-o-transition: all 1s ease;
+	transition: all 1s ease;
+    background-color:	rgb(51, 153, 51, 0.3);
+}
+
+
+
+/* Gibson Buttons */
+
+a.animated-button.gibson-one {
+	border: 2px solid #339933;
+  color: #339933;
+  border-radius: 10px;
+  width: 30%;
+  float: center;
+  margin-top: 35px;
+  height: 50px;
+  font-size: 1.7em;
+  font-weight: 400;
+  font-family: Bubblegum Sans;
+  padding: 5px;
+}
+
+.glyphicon {
+    position: relative;
+    top: 5px;
+    display: inline-block;
+    font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+a.animated-button.gibson-one:after {
+	opacity: 0;
+  background-image: -webkit-linear-gradient( transparent 50%, rgba(51,153,51,0.5) 50%);
+  	background-image: -moz-linear-gradient(transparent 50%, rgba(51,153,51,0.5) 50%);
+	background-size: 10px 10px;
+	-moz-transform: translateX(-50%) translateY(-50%) rotate(25deg);
+	-ms-transform: translateX(-50%) translateY(-50%) rotate(25deg);
+	-webkit-transform: translateX(-50%) translateY(-50%) rotate(25deg);
+	transform: translateX(-50%) translateY(-50%) rotate(25deg);
+}
+a.animated-button.gibson-one:hover:after {
+	height: 600% !important;
+	opacity: 1;
+  color: #339933;
+
+}
+
+
+
+@media only screen and (max-width: 586px) {
+  a.animated-button.gibson-one {
+      width: 95%;
+      margin-left: 10px;
+      margin-right: 5px;
+  }
 }
 }
 
-.overlay-patern{
-    background-image: url(http://www.kinderhospice.commdesign-demo.nl/wp-content/uploads/2017/09/kinderhospice_patern-a5.png)!important;
-    background-repeat: repeat!important;
-    background-size: contain;
+/* modal */
+.overlay-genie .overlay-path {
+    fill: rgba(255,255,255,0.75)!important;
+}
+
+.ult_modal-content {
+  box-shadow: none!important;
+}
+
+h3.ult_modal-title {
+    display: table-cell;
+    vertical-align: middle;
+    margin: 0;
+    padding: 10px 20px;
+    font-size: 2em!important;
+    line-height: 1.5em;
+    font-family: 'Bubblegum Sans', cursive!important;
+    color: #333399!important;
+}
+
+.overlay-genie.ult-open .ult_modal-content {
+    border:2px solid #333399 !important;
+}
+.ult-overlay-close {
+  background: url("http://www.kinderhospice.commdesign-demo.nl/wp-content/uploads/2017/09/close_modal.png") no-repeat center center !important;
+}
+
+.ult_modal-header {
+    border-bottom:none!important;
+}
+
+.ult_modal-body {
+    padding: 15px 20px;
+    background: #fff;
+    max-width: 100%;
+    overflow: hidden;
+    min-height: 350px;
+    line-height: 1.5em;
+}
+
+
+.navbar {
+    min-height:160px;
+}
+.header-seperator{
+  bottom: -40px!important;
+}
+
+
+
+@media screen and (max-width: 586px) {
+  .navbar {
+      min-height:200px;
+  }
+  .header-seperator{
+    bottom: -20px!important;
+  }
+}
+
+
+
+@media screen and (min-width: 1200px) {
+  .navbar {
+      min-height:200px;
+  }
+  .header-seperator{
+    bottom: -20px!important;
+  }
+}
+
+
+@media screen and (min-width: 586px){
+  #sfm-sidebar.sfm-compact .sfm-logo {
+    max-width: 150px;
+    margin: 0px auto;
+    float: right;
+    margin-right: 50px;
+  }
+
+  .sfm-logo img {
+      max-width:150px;
+  }
+
+  #sfm-sidebar.sfm-compact .sfm-nav {
+    margin-top: 0px;
+    float: right!important;
+}
+
+#sfm-sidebar .sfm-menu li a, #sfm-sidebar .sfm-menu .sfm-chapter {
+    text-align: right!important;
+    margin-right: 50px!important;
+}
+
+
+#sfm-sidebar.sfm-compact .sfm-nav {
+    max-width: 60%!important;
+}
+
+#sfm-sidebar.sfm-compact-footer .sfm-social {
+    float: right;
+    width: 70%;
+}
+}
+
+.sfm-pos-right .sfm-sidebar-close {
+    color: #cc0033;
+}
+
+.sfm-body-pushed #sfm-overlay, body[class*="sfm-view-pushed"] #sfm-overlay {
+    opacity: 0.8!important;
+    background-color: #42a0d6;
+}
+
+
+
+/* Forms Layout
+----------------------------------------------- */
+.gform_wrapper .gform_page_footer {
+    border-top: 0px!important;
+}
+
+.gform_wrapper .gfield_checkbox li label, .gform_wrapper .gfield_radio li label {
+    font-weight: 400!important;
+    margin: 0px 0px 0px 10px!important;
+    text-align: center!important;
+}
+
+.gform_wrapper.gf_browser_chrome ul.gform_fields li.gfield div.ginput_complex span.ginput_left select, .gform_wrapper.gf_browser_chrome ul.gform_fields li.gfield div.ginput_complex span.ginput_right select, .gform_wrapper.gf_browser_chrome ul.gform_fields li.gfield input[type=radio], .gform_wrapper.gf_browser_chrome ul.gform_fields li.gfield select {
+    margin-left: 1.2em!important;
+    margin-right: 0.5em!important;
+}
+
+
+.gform_wrapper .top_label .gfield_label {
+    font-weight: 400!important;
+}
+
+.gform_wrapper .gfield_date_day label, .gform_wrapper .gfield_date_month label, .gform_wrapper .gfield_date_year label, .gform_wrapper .gfield_time_ampm label, .gform_wrapper .gfield_time_hour label, .gform_wrapper .gfield_time_minute label, .gform_wrapper .ginput_complex label, .gform_wrapper .instruction {
+  font-weight: 400!important;
+}
+
+.gform_wrapper li.gfield.gf_3col ul.gfield_checkbox li, .gform_wrapper li.gfield.gf_3col ul.gfield_radio li, .gform_wrapper li.gfield.gf_list_3col ul.gfield_checkbox li, .gform_wrapper li.gfield.gf_list_3col ul.gfield_radio li {
+    width: 30%!important;
+    display: -moz-inline-stack;
+    display: inline-block;
+    position: relative;
+      margin: 15px 10px 15px 10px!important;
+    min-height: 1.8em;
+    vertical-align: top;
+}
+
+
+body .gform_wrapper .gfield_checkbox li label, body .gform_wrapper .gfield_radio li label {clear:none!important}
+/* Color overide
+----------------------------------------------- */
+.cta-background-color {
+  background-color:#339933!important;
+}
+.blauw{
+  color:#333399
+}
+.rood{
+  color:#cc0033
+}
+.groen{
+  color:#339933
+}
+.color-1{
+  background-color:#333399!important;
+}
+.color-2{
+  background-color:#339933!important;
+}
+.color-3{
+  background-color:#cc0033!important;
+}
+.color-4{
+  background-color:#cc0033!important;
+}
+.color-5{
+  background-color:#333399!important;
+}
+.color-6{
+  background-color:#339933!important;
+}
+.color-7{
+  background-color:#339933!important;
+}
+.color-8{
+  background-color:#cc0033!important;
+}
+.color-9{
+  background-color:#333399!important;
+}
+
+
+.color-2-alpha{
+  background-color: rgba(51, 153, 51, 0.4)!important;
 }
